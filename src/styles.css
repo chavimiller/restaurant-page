@@ -6,10 +6,37 @@
     --accent: #D8A7B1;
 }
 
+@font-face {
+  font-family: 'Playfair Display', sans-serif;
+  src: url('./PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand', sans-serif;
+  src: url('./Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 body {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom, var(--primary), var(--secondary));
-    margin: 20px;
-    
+    font-family: 'Quicksand', sans-serif;
+}
+
+button {
+    color: var(--text);
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-family: "Quicksand";
+    width: 200px;
+    height: 70px;
+    font-size: 30px;
 }
