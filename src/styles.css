@@ -1,0 +1,15 @@
+:root {
+    --primary: #A8BBA1;
+    --secondary: #FDF8F3;
+    --text: #4E3B31;
+    --secondary-text: #C6A15B;
+    --accent: #D8A7B1;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    margin: 20px;
+    
+}
