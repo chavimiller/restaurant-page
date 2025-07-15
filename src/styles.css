@@ -21,14 +21,9 @@
 }
 
 body {
-    width: 100vw;
-    height: 105vh;
-    background: linear-gradient(to bottom, 
-        var(--primary) 10%, 
-        var(--primary) 30%,    
-        var(--secondary) 90%, 
-        var(--secondary) 80%);
     font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 header {
@@ -53,28 +48,69 @@ button {
 }
 
 nav {
-    display: flex;
-    position: relative;
-    padding-top: 11px;
-    width: 800px;
-    align-items: center;
-    justify-content: center;
-    padding-right: 430px;
-    gap: 340px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95vw;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  z-index: 1000;
+  padding-left: 20px;
 }
 
 .button-group {
-    display: flex;
-    gap: 65px;
-    width: 500px;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  left: 52%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 65px;
+  justify-content: center;
+  align-items: center;
 }
 
 #content {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.background-home {
+    width: 100vw;
+    height: 105vh;
+    background: linear-gradient(to bottom, 
+        var(--primary) 10%, 
+        var(--primary) 30%,    
+        var(--secondary) 90%, 
+        var(--secondary) 80%);
+    z-index: -1;
+    position: absolute;
+}
+
+.background-menu {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, 
+        var(--secondary) 5%, 
+        var(--secondary) 5%,    
+        var(--primary) 90%, 
+        var(--primary) 80%);
+    z-index: -1;
+    position: absolute;
+}
+
+.background-about {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, 
+        var(--secondary) 5%, 
+        var(--secondary) 5%,    
+        var(--primary) 90%, 
+        var(--primary) 80%);
+    z-index: -1;
+    position: absolute;
 }
 
 .title {
@@ -85,7 +121,7 @@ nav {
     color: var(--text);
     font-size: 96px;
     font-weight: 500;
-    padding-top: 70px;
+    padding-top: 135px;
 }
 
 .slogan {
@@ -127,13 +163,117 @@ nav {
     justify-content: center;
 }
 
-img {
+.image-row > img {
     height: 400px;
 }
 
 .cafe-logo {
     display: flex;
     height: 80px;
-    justify-self: left;
-   
+}
+
+.menu-title {
+    font-size: 64px;
+    font-family: "Playfair Display";
+    color: var(--text);
+    font-weight: 500;
+    padding-top: 150px;
+    padding-bottom: 30px;
+}
+
+.menu-carousel {
+    display: flex;
+    padding: 30px 15px 0 15px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary);
+    width: 250px;
+    height: 430px;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item > img {
+    height: 250px;
+}
+
+.drink-name {
+    font-family: "Playfair Display";
+    color: var(--text);
+    font-size: 24px;
+}
+
+.drink-description {
+    display: flex;
+    align-items: baseline;
+    text-align: center;
+    padding: 8px 30px;
+    color: var(--secondary-text);
+    font-size: 16px;
+    height: 80px;
+}
+
+.drink-price {
+    color: var(--secondary-text);
+    font-size: 16px;
+}
+
+.welcome {
+    display: flex;
+    font-size: 64px;
+    color: var(--text);
+    font-family: "Playfair Display";
+    font-weight: 500;
+    padding: 160px 20px 15px;
+}
+
+.paragraph {
+    display: flex;
+    font-size: 24px;
+    color: var(--text);
+    width: 900px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--secondary);
+    width: 800px;
+    height: 393px;
+    margin-top: 45px;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    overflow: hidden;
+}
+
+.info-container > .paragraph {
+    width: 600px;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.location-title {
+    color: var(--accent);
+    font-family: "Playfair Display";
+    font-size: 50px;
+    padding-top: 45px;
+}
+
+.hours-title {
+    color: var(--secondary-text);
+    font-family: "Playfair Display";
+    font-size: 50px;
+    padding-top: 20px;
 }
